@@ -1,6 +1,25 @@
 ## Bakery Selection and Operation Simulation
 
-In a small town, there are five bakeries competing for customers' bread purchases. As economists, our task is to model how individuals might choose between these bakeries using a beta distributed probability model. This model allows us to explore how each success (utility with a value of 0 or 1) from a bakery influences the consumer's choice for the next day and beyond. 
+In a small town, there are five bakeries competing for customers' bread purchases. As economists, our task is to model how consumers might choose between these bakeries using a beta distributed probability model. This model allows us to explore how each success (utility with a value of 0 or 1) from a bakery influences the consumer's choice for the next day and beyond. 
+
+### Modeled Beta Distribution & Assumption
+
+In the bakery selection and operation simulation project, we make the following assumptions regarding the probability distribution of success for each bakery:
+
+- **Assumptions**:
+    - The probability of success for each bakery follows a Beta distribution.
+    - Each bakery generates a utility with the value 1 or 0
+    - The consumer needs bread everyday and constantly has the problem to choose between 5 bakeries
+- **Formula**:
+
+`Beta(ones + 1, zeros + 1)`
+- **Description**: 
+    - The Beta distribution is a continuous probability distribution defined on the interval [0, 1], making it suitable for modeling probabilities.
+    - In our simulation, we use the Beta distribution to model the probability of success for each bakery.
+    - The parameters of the Beta distribution are determined by the number of successes (`ones`) and failures (`zeros`) observed for each bakery.
+    - By adding 1 to both successes and failures, we incorporate a form of Bayesian smoothing, preventing probabilities of 0 or 1 and allowing for some uncertainty in the estimation of success probabilities.
+    - This formulation ensures that the probability of success for each bakery is updated dynamically based on its past performance, allowing for adaptive decision-making in bakery selection.
+ 
 
 ### Simulation Overview
 
